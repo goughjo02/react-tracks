@@ -4,7 +4,7 @@ import tracks.schema
 import users.schema
 
 
-class Query(tracks.schema.Query, graphene.ObjectType):
+class Query(tracks.schema.Query, users.schema.Query, graphene.ObjectType):
     pass
 
 
