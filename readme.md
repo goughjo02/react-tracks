@@ -1,5 +1,9 @@
 # React Tracks
 
+## Resources
+
+- https://docs.djangoproject.com/en/3.2/
+
 ## Setup
 
 ```
@@ -32,4 +36,12 @@ for example,
 ```shell
 # .bashrc
 export VSCODE_PYTHON_PATH='/home/joey/.pyenv/versions/python-graphene/bin/python'
+```
+
+### Changing the model
+
+If we change our database model, we must run:
+
+```shell
+python manage.py makemigrations
 ```
