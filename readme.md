@@ -44,4 +44,5 @@ If we change our database model, we must run:
 
 ```shell
 python manage.py makemigrations
+python manage.py migrate
 ```
