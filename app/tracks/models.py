@@ -12,3 +12,9 @@ class Track(models.Model):
     # set null to true because otherwise migrations will be incompatible
     posted_by = models.ForeignKey(
         get_user_model(), null=True, on_delete=models.CASCADE)
+
+
+class Like(models.Model):
+    user = models.ForeignKey(
+        get_user_model(), null=True, on_delete=models.CASCADE)
+    track = models.ForeignKey('tracks.track', related_name='likes', on_delete=models.CASCADE)
