@@ -18,6 +18,8 @@ import Slide from "@material-ui/core/Slide";
 import Gavel from "@material-ui/icons/Gavel";
 import VerifiedUserTwoTone from "@material-ui/icons/VerifiedUserTwoTone";
 
+import Error from "../Shared/Error";
+
 function Transition(props) {
   return <Slide direction="up" {...props} />;
 }
@@ -102,7 +104,7 @@ const Register = ({ classes, setNewUser }) => {
                 >
                   Previou user? Log in here
                 </Button>
-                {error && <div>Error</div>}
+                {error && <Error error={error} />}
               </form>
             );
           }}
