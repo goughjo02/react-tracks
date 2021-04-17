@@ -6,12 +6,14 @@ import withRoot from "./withRoot";
 import App from "./pages/App";
 import Profile from "./pages/Profile";
 import Header from "./components/Shared/Header";
+import Error from "./components/Shared/Error";
+import Loading from "./components/Shared/Loading";
 
 const Root = () => (
   <Query query={ME_QUERY}>
     {({ data, loading, error }) => {
-      if (loading) return <div>loading</div>;
-      if (error) return <div>Error</div>;
+      if (loading) return <Loading />;
+      if (error) return <Error error={error} />;
 
       const currentUser = data.me;
       return (
