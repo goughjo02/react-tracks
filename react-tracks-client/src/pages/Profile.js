@@ -1,6 +1,7 @@
 import React from "react";
 import { Query } from "react-apollo";
 import { gql } from "apollo-boost";
+import format from "date-fns/format"
 import withStyles from "@material-ui/core/styles/withStyles";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
@@ -29,7 +30,7 @@ const Profile = ({ classes, match }) => {
               <CardHeader
                 avatar={<Avatar>{data.user.username[0]}</Avatar>}
                 title={data.user.username}
-                subheader={`Joined ${data.user.dateJoined}`}
+                subheader={`Joined ${format(data.user.dateJoined, "MMM Do, YYYY")}`}
               />
             </Card>
 
